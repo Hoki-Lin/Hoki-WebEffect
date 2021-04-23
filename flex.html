@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			/* 水平方向 */
+			justify-content: space-between;
+			/* 垂直方向 */
+			align-items: center;
+		}
+		.box {
+			width: 300px;
+			height: 300px;
+			background-color: #2A2829;
+			border: 1px solid red;
+			color: #EEEEEE;
+			font-size: 24px;
+			line-height: 300px;
+			text-align: center;
+		}
+		
+		.box:nth-child(1){
+			/* order值越小,当前块元素越靠前 */
+			order: 2;
+		}
+		.box:nth-child(2){
+			order: 1;
+		}
+		.box:nth-child(3){
+			order: 0;
+		}
+	</style>
+	<body>
+		<div class="box">a</div>
+		<div class="box">b</div>
+		<div class="box">c</div>
+	</body>
+</html>

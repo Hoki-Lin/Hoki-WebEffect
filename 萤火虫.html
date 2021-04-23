@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>萤火虫动态按钮</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			background: url(img/IMG_5116.JPG) no-repeat;
+			background-size: cover;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		button {
+			outline: none;
+			border: none;
+		}
+
+		.firefly {
+			width: 100px;
+			height: 60px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: linear-gradient(to right, #6EB46E 10%, #55B455);
+			border-radius: 40px;
+			opacity: 0.88;
+			cursor: pointer;
+			transition: 1s;
+		}
+
+		.firefly:hover {
+			box-shadow: 0 0 10px #B4FFB4;
+		}
+
+		.firefly p {
+			line-height: 60px;
+			font-size: 22px;
+			color: #F5DD8F;
+			opacity: 0.88;
+		}
+
+		.lightning {
+			width: 95%;
+			height: 80%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 40px;
+			transition: 0.8s;
+			overflow: hidden;
+		}
+
+		.firefly:hover .lightning {
+			box-shadow: 0 0 4px #8844BB inset;
+		}
+
+		.lightning ul {
+			opacity: 1;
+			transition: 0.8s;
+		}
+
+		.firefly:hover ul {
+			opacity: 0.8s;
+		}
+
+		.lightning ul li {
+			width: 5px;
+			height: 5px;
+			background-color: #91FA91;
+			position: absolute;
+			bottom: 10%;
+			border-radius: 50%;
+			opacity: 0.6s;
+			animation: fireflyMove infinite linear;
+		}
+		
+		@keyframes fireflyMove{
+			100% {
+				bottom: 100%;
+			}
+		}
+	</style>
+	<body>
+		<button class="firefly">
+			<p>萤火虫</p>
+			<div class="lightning">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</button>
+
+
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script>
+			var lgh = $('.lightning li').length;
+
+			$('.lightning li').each(function(i) {
+				$(this).css({
+					left: i * (100 / lgh) + '%',
+					bottom: randomNum(-20, 10) + '%',
+					animationDuration: randomNum(1, 5) + 's' 
+				});
+			});
+			
+			function randomNum(max, min){
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
+		</script>
+	</body>
+</html>
