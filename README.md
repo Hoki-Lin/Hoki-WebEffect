@@ -1,2 +1,2 @@
 # Hoki-WebEffect
-The case of front end 
+> Hoki的前端日常练习小案例
