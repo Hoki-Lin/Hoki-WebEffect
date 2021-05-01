@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>拟物风格的登录表单</title>
+	</head>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			text-align: center;
+			background-color: #131419;
+		}
+
+		.content {
+			width: 330px;
+			background-color: #131419;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -3px -3px 7px rgba(255, 255, 255, 0.05);
+			padding: 15px 15px;
+			border-radius: 10px;
+		}
+
+		.content .text {
+			font-size: 33px;
+			font-weight: 200;
+			color: #E5E5E5;
+			margin-bottom: 35px;
+		}
+
+		form .field {
+			width: 100%;
+			height: 50px;
+			display: flex;
+		}
+
+		.field input {
+			color: #FFFFFF;
+			width: 100%;
+			height: 100%;
+			border: none;
+			outline: none;
+			background-color: #131419;
+			border-radius: 25px;
+			padding-left: 15px;
+			box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+		}
+
+		.field input:focus {
+			box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.05);
+		}
+
+		.field:nth-child(2) {
+			margin-top: 15px;
+		}
+
+		form .forget-pass {
+			text-align: left;
+			margin: 5px 0 5px 5px;
+		}
+
+		form .forget-pass a {
+			color: #5599E1;
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		form .forget-pass a:hover {
+			text-decoration: underline;
+		}
+
+		form button {
+			margin: 5px 0;
+			width: 100%;
+			height: 50px;
+			font-size: 16px;
+			border: none;
+			color: #E5E5E5;
+			outline: none;
+			background-color: #131419;
+			cursor: pointer;
+			font-weight: 200;
+			border-radius: 25px;
+			padding-left: 15px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -3px -3px 7px rgba(255, 255, 255, 0.05);
+		}
+
+		form button:hover {
+			color: #5599E1;
+			box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 7px rgba(255, 255, 255, 0.05);
+		}
+
+		.signup {
+			font-size: 14px;
+			color: #E5E5E5;
+		}
+
+		.signup a {
+			color: #5599E1;
+			text-decoration: none;
+		}
+
+		.signup a:hover {
+			text-decoration: underline;
+		}
+	</style>
+	<body>
+		<div class="content">
+			<div class="text">登录表单</div>
+			<form action="#">
+				<div class="field">
+					<input type="email" placeholder="请输入邮箱或手机号" required="required">
+				</div>
+				<div class="field">
+					<input type="password" placeholder="请输入密码" required="required">
+				</div>
+				<div class="forget-pass"><a href="#">忘记密码?</a></div>
+				<button type="submit">登录</button>
+				<div class="signup">未注册?<a href="#">立即注册</a></div>
+			</form>
+		</div>
+	</body>
+</html>
